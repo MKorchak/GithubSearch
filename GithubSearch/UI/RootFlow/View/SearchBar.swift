@@ -44,5 +44,22 @@ class SearchBar: UISearchBar {
         super.awakeFromNib()
         
         self.showsCancelButton = true
+        self.delegate = self
+    }
+}
+
+extension SearchBar: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar,
+                   shouldChangeTextIn range: NSRange,
+                   replacementText text: String) -> Bool {
+        return Range(range,
+                     in: searchBar.text.unwrapped).flatMap {
+            searchBar
+                .text
+                .unwrapped
+                .replacingCharacters(in: $0,
+                                     with: text)
+                .count <= 30
+        } ?? false
     }
 }

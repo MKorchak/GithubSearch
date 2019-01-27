@@ -57,7 +57,7 @@ public struct DataError: ErrorProtocol {
     
     public static var `default`: DataError {
         return DataError(statusCode: .badRequest,
-                         devMessage: "Default Auth error",
+                         devMessage: "Default error",
                          userMessage: DataManager.shared.serverConnectionErrorMessage)
     }
     
