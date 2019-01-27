@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="GithubSearch" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonGuestMode" destination="BH0-CU-Axh" id="y4I-p4-ryq"/>
+                <outlet property="buttonSignIn" destination="8aZ-4Q-XwX" id="94z-7c-kw5"/>
+                <outlet property="textFieldPassword" destination="96s-eq-Hyc" id="Py0-ma-kjS"/>
+                <outlet property="textFieldUsername" destination="1Q7-Gp-TWa" id="Ssm-9y-Dwd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmF-9c-llX">
+                    <rect key="frame" x="148.5" y="30" width="78.5" height="42"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Q7-Gp-TWa">
+                    <rect key="frame" x="15" y="102" width="345" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96s-eq-Hyc">
+                    <rect key="frame" x="15" y="162" width="345" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aZ-4Q-XwX">
+                    <rect key="frame" x="15" y="222" width="345" height="30"/>
+                    <state key="normal" title="Sign in"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH0-CU-Axh">
+                    <rect key="frame" x="15" y="257" width="345" height="30"/>
+                    <state key="normal" title="Guest mode"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8aZ-4Q-XwX" firstAttribute="top" secondItem="96s-eq-Hyc" secondAttribute="bottom" constant="30" id="17x-EB-QTH"/>
+                <constraint firstAttribute="trailing" secondItem="1Q7-Gp-TWa" secondAttribute="trailing" constant="15" id="3Kf-XY-Mvp"/>
+                <constraint firstItem="96s-eq-Hyc" firstAttribute="top" secondItem="1Q7-Gp-TWa" secondAttribute="bottom" constant="30" id="5wH-lM-4w0"/>
+                <constraint firstAttribute="trailing" secondItem="8aZ-4Q-XwX" secondAttribute="trailing" constant="15" id="9cm-ao-6UA"/>
+                <constraint firstItem="96s-eq-Hyc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="DbK-4M-Vrx"/>
+                <constraint firstItem="BH0-CU-Axh" firstAttribute="leading" secondItem="8aZ-4Q-XwX" secondAttribute="leading" id="GvG-JO-ojq"/>
+                <constraint firstItem="OmF-9c-llX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="LtT-6A-Pqe"/>
+                <constraint firstAttribute="trailing" secondItem="96s-eq-Hyc" secondAttribute="trailing" constant="15" id="PpU-Pg-CXM"/>
+                <constraint firstItem="OmF-9c-llX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SU8-xM-YsK"/>
+                <constraint firstItem="8aZ-4Q-XwX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="fef-qE-M2c"/>
+                <constraint firstItem="1Q7-Gp-TWa" firstAttribute="top" secondItem="OmF-9c-llX" secondAttribute="bottom" constant="30" id="gKg-ey-GZm"/>
+                <constraint firstItem="BH0-CU-Axh" firstAttribute="top" secondItem="8aZ-4Q-XwX" secondAttribute="bottom" constant="5" id="izF-m2-B5K"/>
+                <constraint firstItem="BH0-CU-Axh" firstAttribute="trailing" secondItem="8aZ-4Q-XwX" secondAttribute="trailing" id="mNW-DT-2R3"/>
+                <constraint firstItem="1Q7-Gp-TWa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="zld-6T-q6m"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
