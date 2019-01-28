@@ -23,6 +23,7 @@ final class GuestModeViewModel<T: ViewModelDataProtocol>: RxViewModelProtocol,
     init() {
         self.data = RootRepository
             .getCachedSearchResults()
+            .map { $0.sorted(by: { $0.index < $1.index }) }
             .map { $0.map(T.init) }
             .asDriver(onErrorJustReturn: [])
     }
